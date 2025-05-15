@@ -3,72 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
+    <title>Mood Feedback Form</title>
     <style>
-        /* Previous styles remain the same */
-        
-        .rating-options {
-            display: flex;
-            gap: 15px;
-            margin: 10px 0;
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
         }
         
-        .rating-option {
-            display: flex;
-            align-items: center;
+        .form-group {
+            margin-bottom: 15px;
         }
         
-        input[type="radio"] {
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .mood-scale {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            gap: 5px;
+        }
+
+        .mood-option {
+            text-align: center;
+            flex: 1;
+        }
+
+        .mood-option input[type="radio"] {
             width: auto;
-            margin-right: 5px;
+            margin: 10px 0;
+            transform: scale(1.3);
+        }
+
+        .mood-emoji {
+            font-size: 2em;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Feedback Form</h2>
+        <h2>Mood Feedback Form</h2>
         <form action="https://formspree.io/f/xnndlobq" method="POST">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Rating:</label>
-                <div class="rating-options">
-                    <!-- Radio button options -->
-                    <label class="rating-option">
-                        <input type="radio" name="rating" value="1" required> 1 - Poor
-                    </label>
-                    <label class="rating-option">
-                        <input type="radio" name="rating" value="2"> 2 - Fair
-                    </label>
-                    <label class="rating-option">
-                        <input type="radio" name="rating" value="3"> 3 - Good
-                    </label>
-                    <label class="rating-option">
-                        <input type="radio" name="rating" value="4"> 4 - Very Good
-                    </label>
-                    <label class="rating-option">
-                        <input type="radio" name="rating" value="5"> 5 - Excellent
-                    </label>
+                <label>How would you rate your mood?</label>
+                <div class="mood-scale">
+                    <div class="mood-option">
+                        <input type="radio" id="mood1" name="mood" value="1" required>
+                        <label class="mood-emoji" for="mood1">😭</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood2" name="mood" value="2">
+                        <label class="mood-emoji" for="mood2">😢</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood3" name="mood" value="3">
+                        <label class="mood-emoji" for="mood3">😞</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood4" name="mood" value="4">
+                        <label class="mood-emoji" for="mood4">🙁</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood5" name="mood" value="5">
+                        <label class="mood-emoji" for="mood5">😐</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood6" name="mood" value="6">
+                        <label class="mood-emoji" for="mood6">🙂</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood7" name="mood" value="7">
+                        <label class="mood-emoji" for="mood7">😊</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood8" name="mood" value="8">
+                        <label class="mood-emoji" for="mood8">😀</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood9" name="mood" value="9">
+                        <label class="mood-emoji" for="mood9">😄</label>
+                    </div>
+                    <div class="mood-option">
+                        <input type="radio" id="mood10" name="mood" value="10">
+                        <label class="mood-emoji" for="mood10">😁</label>
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="comments">Comments:</label>
                 <textarea id="comments" name="comments" rows="4" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" name="newsletter"> Subscribe to newsletter
-                </label>
             </div>
 
             <button type="submit">Submit Feedback</button>
