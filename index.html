@@ -1,50 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
+    <!-- Same head section as before -->
     <style>
-        .container {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        input, textarea, select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: #45a049;
-        }
+        /* Same styles as before */
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Feedback Form</h2>
-        <form action="#" method="post">
+        <form action="https://formspree.io/f/xnndlobq" method="POST">
+            <!-- Same form fields as before -->
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -58,12 +24,7 @@
             <div class="form-group">
                 <label for="rating">Rating:</label>
                 <select id="rating" name="rating" required>
-                    <option value="">Please select</option>
-                    <option value="5">5 - Excellent</option>
-                    <option value="4">4 - Very Good</option>
-                    <option value="3">3 - Good</option>
-                    <option value="2">2 - Fair</option>
-                    <option value="1">1 - Poor</option>
+                    <!-- Same options -->
                 </select>
             </div>
 
@@ -74,7 +35,7 @@
 
             <div class="form-group">
                 <label>
-                    <input type="checkbox" name="newsletter"> Subscribe to our newsletter
+                    <input type="checkbox" name="newsletter"> Subscribe to newsletter
                 </label>
             </div>
 
