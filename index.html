@@ -6,6 +6,11 @@
     <title>Submit a Grievance 🥀</title>
     <style>
 
+        .severity-scale {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
         textarea {
         resize: none;
         }
@@ -173,6 +178,32 @@
                         <input type="radio" id="mood10" name="mood" value="10">
                         <label class="mood-emoji" for="mood10">😁</label>
                     </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Severity:</label>
+                <div class="severity-scale">
+                    <label class="severity-option">
+                        <input type="radio" name="severity" value="Relationship ender" required>
+                        <span>💔 Relationship ender</span>
+                    </label>
+                    <label class="severity-option">
+                        <input type="radio" name="severity" value="We need to talk ASAP">
+                        <span>📞 We need to talk ASAP</span>
+                    </label>
+                    <label class="severity-option">
+                        <input type="radio" name="severity" value="I want space, here’s why">
+                        <span>🌌 I want space, here’s why</span>
+                    </label>
+                    <label class="severity-option">
+                        <input type="radio" name="severity" value="I just need a hug">
+                        <span>🤗 I just need a hug</span>
+                    </label>
+                    <label class="severity-option">
+                        <input type="radio" name="severity" value="Spaghetti would fix this">
+                        <span>🍝 Spaghetti would fix this instantly</span>
+                    </label>
                 </div>
             </div>
 
